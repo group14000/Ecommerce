@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All-products</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: Arial;
+      }
+
+      /* Center website */
+      .main {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 50px;
+        word-break: break-all;
+        text-align: center;
+      }
+
+      .row {
+        margin: 8px -16px;
+      }
+
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+
+      /* Create four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 25%;
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      button {
+        margin-right: 10px;
+        padding: 6px 12px;
+        border: none;
+        background-color: #dae01b;
+        color: #fff;
+        border-radius: 5px;
+      }
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 900px) {
+        .column {
+          width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>ALL Products</h1>
+      <div class="row">
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\red dress.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Red Dress</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\Plaid skirts.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Plaid Skirts</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\pink-dress.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Pink Dress</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\Blue-jeans.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Blue Jeans</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\Black-pant.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Black Pant</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img
+              src="\Photo\Black-dress.jpg"
+              alt="Mountains"
+              style="width: 100%"
+            />
+            <h3>Black Dress</h3>
+            <p>
+              $15 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum..
+            </p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* Common styles for all screen sizes */
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #08050d;
+      }
+
+      .left-side h1 {
+        margin: 0;
+        font-family: "Dancing Script", cursive;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .middle {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+      }
+
+      .search-bar {
+        width: 100%;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .search-icon {
+        margin-left: 10px;
+      }
+
+      .right-side {
+        display: flex;
+        align-items: center;
+      }
+
+      .login-btn {
+        margin-right: 10px;
+        padding: 6px 12px;
+        border: none;
+        background-color: #dae01b;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      /* Existing styles */
+
+      /* New styles for the login text */
+      .login-btn a {
+        color: #fff;
+        text-decoration: none; /* Optional, remove underline */
+      }
+
+      /* Rest of your CSS styles */
+
+      /* Styles for small screens (e.g., mobile phones) */
+      @media screen and (max-width: 576px) {
+        .left-side h1 {
+          font-size: 18px;
+        }
+
+        .search-bar {
+          font-size: 14px;
+        }
+
+        .login-btn {
+          font-size: 14px;
+          padding: 4px 8px;
+        }
+
+        .cart {
+          font-size: 18px;
+        }
+      }
+
+      /* Existing styles */
+
+      /* New styles for the shopping cart icon */
+      .navbar .material-symbols-outlined {
+        font-size: 20px;
+        cursor: pointer;
+        color: #dae01b; /* Set the color to #dae01b */
+      }
+
+      .cart {
+        display: inline-block;
+        font-size: 20px;
+        color: #dae01b; /* Set the color to #dae01b */
+      }
+
+      /* Remove default list style from the ul element */
+      .navbar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Styles for medium-sized screens (e.g., tablets) */
+      @media screen and (min-width: 577px) and (max-width: 992px) {
+        .left-side h1 {
+          font-size: 24px;
+        }
+
+        .search-bar {
+          font-size: 16px;
+        }
+
+        .login-btn {
+          font-size: 16px;
+          padding: 6px 10px;
+        }
+
+        .cart {
+          font-size: 24px;
+        }
+      }
+
+      /* Styles for large screens (e.g., desktops) */
+      @media screen and (min-width: 993px) {
+        .left-side h1 {
+          font-size: 32px;
+        }
+
+        .search-bar {
+          font-size: 18px;
+        }
+
+        .login-btn {
+          font-size: 18px;
+          padding: 8px 12px;
+        }
+
+        .cart {
+          font-size: 32px;
+        }
+      }
+      /*Navbar-2*/
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar-1 {
+        overflow: hidden;
+        background-color: #bcceeb;
+        text-align: center;
+      }
+
+      .navbar-1 a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: rgb(150, 132, 132);
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown-1 {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown-1 .dropbtn-1 {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar-1 a:hover,
+      .dropdown-1:hover .dropbtn-1 {
+        background-color: rgb(150, 132, 132);
+      }
+
+      .dropdown-content-1 {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content-1 a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content-1 a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown-1:hover .dropdown-content-1 {
+        display: block;
+      }
+      /*Body*/
+      /* Common styles for all screen sizes */
+      /* Common styles for all screen sizes */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Styles for the hero image container */
+  .hero-image {
+    background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styles for the hero text */
+  .hero-text {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  /* Responsive styles for smaller screens (e.g., tablets and mobile phones) */
+  @media screen and (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 36px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+  }
+
+  /*Footer */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main-footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-section {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  hr {
+    width: 100%;
+    border: 1px solid white;
+    margin: 20px 0;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-bottom .section-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .footer-bottom .copyright-logo {
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  </style>
+  </head>
+  <body>
+    <div>
+      <div class="header-container">
+        <div class="left-side">
+          <h1 style="color: #dae01b">Ecommerce</h1>
+        </div>
+        <div class="middle">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Product name, Category name etc..."
+          />
+          <i class="search-icon fa fa-search"></i>
+        </div>
+        <div class="right-side">
+          <button class="login-btn"><a href="\Login\login.html">Login</a></button>
+          <ul class="navbar">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="cartLink">
+                <i class="cart fa fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-1">
+        <a href="#home">Home</a>
+        <a href="\all-products\all-products.html">All Products</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Women
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="\all-products\all-products.html">All products </a>
+            <a href="#">Dresses </a>
+            <a href="#">Pants </a>
+            <a href="#">Skirts </a>
+          </div>
+          <div class="dropdown-1">
+            <button class="dropbtn-1">
+              Men
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content-1">
+              <a href="#">All products </a>
+              <a href="#">Shirts </a>
+              <a href="#">Pants </a>
+              <a href="#">Hoodies </a>
+            </div>
+          </div>
+        </div>
+        <a href="#">Kids</a>
+        <a href="\contact\contact.html">Contact</a>
+      </div>
+    </div>
+    </header>
+    <div class="hero-image">
+        <div class="hero-text">
+          <h1 style="font-size:50px">Ecommerce</h1>
+          <p>Clothes that talk on behalf of you. Something for every occassion.</p>
+        </div>
+      </div>
+      <footer id="main-footer">
+        <div class="footer-section" id="section-1">
+          <div class="section-title">Women</div>
+          <ul>
+            <li>Dresses</li>
+            <li>Pants</li>
+            <li>Skirts</li>
+          </ul>
+        </div>
+    
+        <div class="footer-section" id="section-2">
+          <div class="section-title">Men</div>
+          <ul>
+            <li>Shirts</li>
+            <li>Pants</li>
+            <li>Hoodies</li>
+          </ul>
+        </div>
+    
+        <div class="footer-section" id="section-3">
+          <div class="section-title">Kids</div>
+        </div>
+    
+        <div class="footer-section" id="section-4">
+          <div class="section-title">Links</div>
+          <ul>
+            <li>Home</li>
+            <li>Login</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+    
+        <hr>
+    
+        <div class="footer-bottom">
+          <div class="section-title">Copyright &copy; E-commerce 2022-23</div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cartLink = document.getElementById("cartLink");
+          const cartPageLink = "/add-to-cart/addtocart.html";
+          const kidsSection = document.getElementById('section-3');
+          const kidsText = document.createElement('div');
+          kidsText.textContent = 'Kids';
+          kidsSection.appendChild(kidsText);
+        
+          cartLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.location.href = cartPageLink;
+          });
+        });
+        
+
+      </script>
+  </body>
+</html>
